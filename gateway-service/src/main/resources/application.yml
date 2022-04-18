@@ -1,0 +1,22 @@
+spring:
+  application:
+   name: gateway-service  # git에 있는 확장자 제외한 설정파일 이름.
+  profiles:
+   active: dev
+  config:              # gradle에 config 추가.
+#   import: optional:configserver:http://localhost:8888  # config 서버 위치
+   import: optional:configserver:http://192.168.1.54:8888  # config 도커로 할때 버전
+# config 서버 위치# actuator를 이용하여 서버 재시작 없이 변경내용 반영 가능하게 함.
+management:
+  endpoints:
+   web:
+    exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: always # actuator에서 디테일한 정보들을 확인하기 위해 설정
+  health:
+    circuitbreakers:
+      enabled: true # actuator를 통해 circuitbraker 상태를 확인하기 위해 설정

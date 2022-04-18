@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body *{
+}
+
+header{
+    width: 100%;
+    position: relative;
+    font-weight:bold;
+}
+/* 푸터 */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-link{
+	text-decoration: none;
+	color: black;
+}
+
+.header-link:hover{	
+	color: #005B9F;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #fff;
+  background-color: #005B9F !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #497da5 !important;
+}
